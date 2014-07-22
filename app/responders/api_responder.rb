@@ -10,4 +10,8 @@ class ApiResponder < ActionController::Responder
       head :no_content
     end
   end
+
+  def display_errors
+    controller.render_unprocessible_entity_error resource_errors
+  end
 end
