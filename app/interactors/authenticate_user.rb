@@ -10,7 +10,7 @@ class AuthenticateUser
   private
 
   def authenticated_user
-    warden.authenticate!(OPTIONS).tap do |user|
+    warden.authenticate(OPTIONS).tap do |user|
       user.ensure_authentication_token!
     end
   end
