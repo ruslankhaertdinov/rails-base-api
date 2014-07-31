@@ -1,5 +1,6 @@
-module TokenAuthentication
+module ErrorResponse
   extend ActiveSupport::Concern
+  extend ActiveSupport::Rescuable::ClassMethods
 
   ERROR_CODES = {
     bad_request: 400,
