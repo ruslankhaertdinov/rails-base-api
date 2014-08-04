@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 require 'rspec_api_documentation/dsl'
 
 resource 'Sessions' do
@@ -13,7 +13,7 @@ resource 'Sessions' do
     let(:email) { user.email }
 
     example_request 'Sign in with valid password', password: '123456' do
-      expect(json_response).to be_a_user_representation(user)
+      expect(json_response['user']).to be_a_user_representation(user)
     end
 
     example_request 'Sign in with invalid password shourl return validation error response', password: '' do
