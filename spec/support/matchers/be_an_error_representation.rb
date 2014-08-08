@@ -1,4 +1,4 @@
-RSpec::Matchers.define :be_a_error_representation do
+RSpec::Matchers.define :be_an_error_representation do
   match do |json|
     response_attributes = %w(code message)
     expect(json).to be

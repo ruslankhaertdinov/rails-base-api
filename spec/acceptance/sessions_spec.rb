@@ -16,9 +16,9 @@ resource 'Sessions' do
       expect(json_response['user']).to be_a_user_representation(user)
     end
 
-    example_request 'Sign in with invalid password shourl return validation error response', password: '' do
+    example_request 'Sign in with invalid password', password: '' do
       expect(response_status).to eq 401
-      expect(json_response).to be_a_error_representation
+      expect(json_response).to be_an_error_representation
     end
   end
 end
