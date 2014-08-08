@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::API
-  include ActiveSupport::Rescuable
   include ActionController::MimeResponds, ActionController::ImplicitRender
   include SkipTrackable
   include TokenAuthentication

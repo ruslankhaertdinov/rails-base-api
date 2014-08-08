@@ -1,3 +1,3 @@
 class ErrorSerializer < BaseSerializer
-  attributes :code, :message, :validation_errors
+  attributes :code, :message, :validations
 end
