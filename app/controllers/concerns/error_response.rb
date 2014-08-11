@@ -11,16 +11,9 @@ module ErrorResponse
   }
 
   included do
-    rescue_from ActionController::RoutingError, with: :render_internal_error
     rescue_from ActionController::BadRequest, with: :render_bad_request_error
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_error
     rescue_from ActiveRecord::RecordInvalid, with: :render_validation_error
-  end
-
-  def render_internal_erorr
-    error_info = { message: 'Internal Server Error', code: :internal}
-
-    render_error(error_info)
   end
 
   def render_bad_request_error
