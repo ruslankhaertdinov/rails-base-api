@@ -27,8 +27,8 @@ module ErrorResponse
     render_error(error_info)
   end
 
-  def render_validation_error(error)
-    error_info = { message: 'Validation Error', validations: errors, code: :validation_error }
+  def render_validation_error(invalid)
+    error_info = { message: 'Validation Error', validations: invalid.record.errors, code: :validation_error }
 
     render_error(error_info)
   end
@@ -36,6 +36,6 @@ module ErrorResponse
   def render_error(error_info)
     status = ERROR_CODES[error_info[:code]]
 
-    render json: Error.new(error_info), status: status
+    respond_with Error.new(error_info), status: status
   end
 end
