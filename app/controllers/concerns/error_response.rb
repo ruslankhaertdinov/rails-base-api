@@ -36,6 +36,6 @@ module ErrorResponse
   def render_error(error_info)
     status = ERROR_CODES[error_info[:code]]
 
-    respond_with Error.new(error_info), status: status
+    respond_with Error.new(error_info), status: status, serializer: ErrorSerializer
   end
 end
