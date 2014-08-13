@@ -6,8 +6,7 @@ module ErrorResponse
     bad_request: 400,
     unauthorized: 401,
     not_found: 404,
-    validation_error: 422,
-    internal: 500,
+    validation_error: 422
   }
 
   included do
@@ -19,19 +18,19 @@ module ErrorResponse
   def render_bad_request_error
     error_info = { message: 'Bad Request', code: :bad_request}
 
-    render_error(erro_info)
+    render_error(error_info)
   end
 
   def render_not_found_error
     error_info = { message: 'Resource Not Found', code: :not_found }
 
-    render_error(erro_info)
+    render_error(error_info)
   end
 
   def render_validation_error(error)
     error_info = { message: 'Validation Error', validations: errors, code: :validation_error }
 
-    render_error(erro_info)
+    render_error(error_info)
   end
 
   def render_error(error_info)
