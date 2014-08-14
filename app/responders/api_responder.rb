@@ -10,4 +10,9 @@ class ApiResponder < ActionController::Responder
       head :no_content
     end
   end
+
+  def resource_errors
+    error = Error.new(code: :validation_error, validations: resource.errors)
+    ErrorSerializer.new(error).as_json
+  end
 end

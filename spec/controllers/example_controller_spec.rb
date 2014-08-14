@@ -43,7 +43,24 @@ describe ExampleController do
 
     it 'renders bad request response' do
       #expect(controller).to receive(:render_validation_error)
-      get :index, format: :json
+      #get :index, format: :json
+      #binding.pry
+    end
+  end
+
+  context 'validation error' do
+    controller do
+      def index
+        user = FactoryGirl.create :user
+        user.email = ''
+        user.save
+        respond_with user
+      end
+    end
+
+    it 'renders bad request response' do
+      #expect(controller).to receive(:render_validation_error)
+      post :index, format: :json
       binding.pry
     end
   end
