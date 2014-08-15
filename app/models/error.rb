@@ -13,7 +13,7 @@ class Error
 
   def initialize(params = {})
     super
-    self.message = MESSAGES[code]
+    self.message = MESSAGES[code] unless message
   end
 
   alias_method :attributes, :instance_values
