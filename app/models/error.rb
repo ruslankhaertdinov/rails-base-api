@@ -16,5 +16,5 @@ class Error
     self.message = MESSAGES[code]
   end
 
-  alias attributes instance_values
+  alias_method :attributes, :instance_values
 end
