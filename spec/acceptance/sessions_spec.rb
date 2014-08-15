@@ -18,7 +18,6 @@ resource 'Sessions' do
 
     example_request 'Sign in with invalid password', password: '' do
       expect(response_status).to eq 401
-      expect(json_response).to be_an_error_representation
     end
   end
 end

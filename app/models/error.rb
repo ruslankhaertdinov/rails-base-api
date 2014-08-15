@@ -15,4 +15,6 @@ class Error
     super
     self.message = MESSAGES[code]
   end
+
+  alias attributes instance_values
 end
