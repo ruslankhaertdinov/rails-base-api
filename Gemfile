@@ -25,7 +25,6 @@ group :development do
   gem "letter_opener"
   gem "foreman"
   gem "bullet"
-
   gem "spring"
   gem "spring-commands-rspec"
 end
@@ -34,11 +33,11 @@ group :development, :test do
   gem "byebug"
   gem "rspec-rails"
   gem "mail_safe"
-
   gem "rails_best_practices"
   gem "brakeman"
   gem "rubocop"
   gem "bundler-audit"
+  gem "pry-rails"
 end
 
 group :test do

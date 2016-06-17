@@ -1,5 +1,6 @@
 # Unreleased
 
+* Add [pry-rails](https://github.com/rweng/pry-rails) gem
 * Update Ruby to 2.3.1
 * Update Nokogiri gem to get rid of vulnerabilities
 * Update Rails to get rid of vulnerabilities
