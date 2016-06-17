@@ -131,9 +131,14 @@ GEM
     json_spec (1.1.4)
       multi_json (~> 1.0)
       rspec (>= 2.0, < 4.0)
+    jwt (1.5.4)
     kaminari (0.16.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    knock (1.5)
+      bcrypt (~> 3.1)
+      jwt (~> 1.5)
+      rails (>= 4.2)
     launchy (2.4.2)
       addressable (~> 2.3)
     letter_opener (1.2.0)
@@ -308,7 +313,6 @@ DEPENDENCIES
   byebug
   database_cleaner
   decent_exposure
-  devise
   dotenv-rails
   email_spec
   factory_girl_rails
@@ -317,6 +321,7 @@ DEPENDENCIES
   interactor
   json_spec
   kaminari
+  knock
   letter_opener
   mail_safe
   pg
